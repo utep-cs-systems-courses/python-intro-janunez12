@@ -33,3 +33,16 @@ with open(inputFname, 'r') as thisFile:
                 words[word.lower()] += 1
             else:
                 words[word.lower()] = 1
+
+# Writting file
+file = open(outputFileName, "w+")
+
+
+
+# Words are sorted in order
+for word, index in sorted(words.items()):
+
+    file.write(word + " " + str(index) + "\n")
+
+
+file.close()
